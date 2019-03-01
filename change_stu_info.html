@@ -55,7 +55,7 @@
                     </el-form-item>
                     <el-form-item>
                         <el-button type="primary" @click="submitForm('form')">{{button1}}</el-button>
-                        <el-button @click="resetForm('form')">{{button2}}</el-button>
+                        <el-button @click="button2">{{button2}}</el-button>
                     </el-form-item>
                 </el-form>
             </el-main>
@@ -99,7 +99,6 @@
                 '信息管理与信息系统',
                 '会计学'
             ],
-
             rules: {
                 name: [{
                     required: true,
@@ -152,8 +151,12 @@
             },
             resetForm(formName) {
                 this.$refs[formName].resetFields();
-            }
+            },
+            button2() {
+            console.log("button2");
         }
+        },
+        
     })
 </script>
 
