@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>学生信息</title>
+    <title>学生信息 </title>
     <script src="resources/scripts/vue.js"></script>
     <script src="resources/scripts/element-ui.js"></script>
     <link rel="stylesheet" href="resources/css/element-ui.css">
@@ -41,13 +41,12 @@
                             </template>
                         </el-table-column>
                     </el-table>
-
                 </el-main>
                 <el-aside class="main">
                     <div>
                         <h2>{{head_title1}}</h2>
                     </div>
-                    <el-form class="sform" ref="form" :model="form" label-width="80px" :label-position="left">
+                    <el-form class="sform" ref="form" :model="form" :rules="rules" label-width="80px">
                         <el-form-item label="姓名" prop="name">
                             <el-input class="in" v-model="form.name"></el-input>
                         </el-form-item>
@@ -81,15 +80,12 @@
                             </el-select>
                         </el-form-item>
                         <el-form-item>
-                            <el-button type="primary" @click="submitForm(form)">{{button1}}</el-button>
-                            <el-button @click="resetForm(form)">{{button2}}</el-button>
+                            <el-button type="primary" @click="submitForm('form')">{{button1}}</el-button>
+                            <el-button @click="resetForm('form')">{{button2}}</el-button>
                         </el-form-item>
                     </el-form>
-
                 </el-aside>
-
             </el-container>
-
         </el-container>
     </div>
 </body>
@@ -109,7 +105,7 @@
                     callback();
                 }
             }
-        }, 1000);
+        }, 500);
     };
     var app = new Vue({
         el: '#app',
@@ -200,7 +196,12 @@
             resetForm(formName) {
                 this.$refs[formName].resetFields();
             },
-            
+            handleEdit(index, row) {
+                console.log(index, row);
+            },
+            handleDelete(index, row) {
+                console.log(index, row);
+            }
         }
     })
 </script>
