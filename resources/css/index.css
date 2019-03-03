@@ -1,34 +1,59 @@
-    html {
+    html,
+    body {
         font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+        margin: 0
     }
-    .stitle{
-        margin: auto;
+
+    #app, .el-container{
+        height: 100%
     }
+    .title,
+    .main,
+    .footer {
+        margin: 5px 5px 0px;
+    }
+
+    .title {
+        background: rgba(101, 164, 236, 0.856);
+        border-radius: 15px;
+        height: 10%;
+        text-align: center;
+        vertical-align: middle;
+    }
+
     .main {
-        margin: 5px;
         background: aliceblue;
-        border-radius: 15px
+        border-radius: 15px;
+        height: 85%";
+
+    }
+
+    .footer {
+        margin-bottom: 5px;
+        background: rgba(101, 164, 236, 0.856);
+        height: 6%;
+        border-radius: 15px;
+        text-align: center;
+        vertical-align: middle;
     }
 
     h1,
     h2 {
-        text-align: center
-    }
-
-    .title {
-        margin: 5px;
-        background: rgba(101, 164, 236, 0.856);
-        border-radius: 15px;
+        text-align: center;
+        vertical-align: middle;
+        height: 80px;
     }
 
     .in {
-        width: 200px
+        width: 250px
     }
 
-    .sform {
-        margin-top: 15px;
-    }
 
     .stable {
         margin-top: 15px;
+    }
+
+    .box-card {
+        width: 450px;
+        margin: auto;
     }

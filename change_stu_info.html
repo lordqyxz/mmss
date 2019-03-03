@@ -10,55 +10,58 @@
 
 <body>
     <div id="app">
-        <el-container>
+        <el-container >
             <el-header class="title">
-                <div class="stitle">
-                    <h1>{{head_title}}</h1>
-                </div>
+                <h1>{{head_title}}</h1>
             </el-header>
             <el-main class="main">
-                <div>
-                    <h2>{{head_title1}}</h2>
-                </div>
-<el-card class="box-card">
-                <el-form class="sform" ref="form" :model="form" :rules="rules" label-width="80px" label-position="left">
-                    <el-form-item label="姓名" prop="name">
-                        <el-input class="in" v-model="form.name"></el-input>
-                    </el-form-item>
-                    <el-form-item label="年龄" prop="age">
-                        <el-input class="in" v-model.number="form.age"></el-input>
-                    </el-form-item>
-                    <el-form-item label="性别" prop="sex">
-                        <el-radio-group v-model="form.sex">
-                            <el-radio label="男"></el-radio>
-                            <el-radio label="女"></el-radio>
-                        </el-radio-group>
-                    </el-form-item>
-                    <el-form-item label="爱好" prop="hobby">
-                        <el-checkbox-group v-model="form.hobby">
-                            <el-checkbox label="体育" name="hobby"></el-checkbox>
-                            <el-checkbox label="音乐" name="hobby"></el-checkbox>
-                            <el-checkbox label="旅游" name="hobby"></el-checkbox>
-                            <el-checkbox label="游戏" name="hobby"></el-checkbox>
-                        </el-checkbox-group>
-                    </el-form-item>
-                    <el-form-item label="学院" prop="colleage">
-                        <el-select class="in" v-model="form.colleage" placeholder="请选择学院">
-                            <el-option label="管理学院" value="magment"></el-option>
-                            <el-option label="计算机学院" value="computer"></el-option>
-                        </el-select>
-                    </el-form-item>
-                    <el-form-item label="专业" prop="profession">
-                        <el-select class="in" v-model="form.profession" placeholder="专业">
-                            <el-option label="信息管理与信息系统" value="xinguan"></el-option>
-                            <el-option label="会计学" value="kuaiji"></el-option>
-                        </el-select>
-                    </el-form-item>
-                        <el-button type="primary" @click="submitForm('form')">{{button1}}</el-button>
-                        <el-button @click="button2">{{button2}}</el-button>
-                </el-form>
-</el-card>
+                <el-card class="box-card">
+                    <div>
+                        <h2>{{head_title1}}</h2>
+                    </div>
+                    <el-form class="sform" ref="form" :model="form" :rules="rules" label-width="80px" label-position="right">
+                        <el-form-item label="姓名" prop="name">
+                            <el-input class="in" v-model="form.name"></el-input>
+                        </el-form-item>
+                        <el-form-item label="年龄" prop="age">
+                            <el-input class="in" v-model.number="form.age"></el-input>
+                        </el-form-item>
+                        <el-form-item label="性别" prop="sex">
+                            <el-radio-group v-model="form.sex">
+                                <el-radio label="男"></el-radio>
+                                <el-radio label="女"></el-radio>
+                            </el-radio-group>
+                        </el-form-item>
+                        <el-form-item label="爱好" prop="hobby">
+                            <el-checkbox-group v-model="form.hobby">
+                                <el-checkbox label="体育" name="hobby"></el-checkbox>
+                                <el-checkbox label="音乐" name="hobby"></el-checkbox>
+                                <el-checkbox label="旅游" name="hobby"></el-checkbox>
+                                <el-checkbox label="游戏" name="hobby"></el-checkbox>
+                            </el-checkbox-group>
+                        </el-form-item>
+                        <el-form-item label="学院" prop="colleage">
+                            <el-select class="in" v-model="form.colleage" placeholder="请选择学院">
+                                <el-option label="管理学院" value="magment"></el-option>
+                                <el-option label="计算机学院" value="computer"></el-option>
+                            </el-select>
+                        </el-form-item>
+                        <el-form-item label="专业" prop="profession">
+                            <el-select class="in" v-model="form.profession" placeholder="专业">
+                                <el-option label="信息管理与信息系统" value="xinguan"></el-option>
+                                <el-option label="会计学" value="kuaiji"></el-option>
+                            </el-select>
+                        </el-form-item>
+                        <div align="center">
+                            <el-button type="primary" @click="submitForm('form')">{{button1}}</el-button>
+                            <el-button @click="button2">{{button2}}</el-button>
+                        </div>
+                    </el-form>
+                </el-card>
             </el-main>
+            <el-footer class="footer">
+                    <p>2016214192 石玉柱</p> 
+            </el-footer>
         </el-container>
     </div>
 </body>
@@ -158,10 +161,5 @@
         }
     })
 </script>
-<style>
-.box-card {
-    width: 410px;
-  }
-</style>
 
 </html>

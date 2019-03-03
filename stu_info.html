@@ -16,8 +16,8 @@
                     <h1>{{head_title}}</h1>
                 </div>
             </el-header>
-            <el-container style="height: 85%">
-                <el-main class="main">
+            <el-container >
+                <el-main class="browser main">
                     <div>
                         <h2>{{head_title2}}</h2>
                     </div>
@@ -42,11 +42,11 @@
                         </el-table-column>
                     </el-table>
                 </el-main>
-                <el-aside class="main">
+                <el-aside class="input main" width="320px">
                     <div>
                         <h2>{{head_title1}}</h2>
                     </div>
-                    <el-form class="sform" ref="form" :model="form" :rules="rules" label-width="80px">
+                    <el-form class="sform" ref="form" :model="form" :rules="rules" label-width="60px">
                         <el-form-item label="姓名" prop="name">
                             <el-input class="in" v-model="form.name"></el-input>
                         </el-form-item>
@@ -86,6 +86,9 @@
                     </el-form>
                 </el-aside>
             </el-container>
+            <el-footer class="footer">
+                    <p>2016214192 石玉柱</p> 
+            </el-footer>
         </el-container>
     </div>
 </body>
